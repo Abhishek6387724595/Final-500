@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
+#include <unordered_map>
+using namespace std;
+
+int main(){
+
+    unordered_map<char,int> um;
+    string s;
+    cout<<"Enter a string :";
+    getline(cin,s);
+    for(int i=0;i<=s.length()-1;i++)
+    {
+        um[s[i]]++;
+    }
+    for(auto ab:um)
+    {
+        if(ab.second>1)
+        {
+            cout<<ab.first<<endl;
+        }
+    }
+}
